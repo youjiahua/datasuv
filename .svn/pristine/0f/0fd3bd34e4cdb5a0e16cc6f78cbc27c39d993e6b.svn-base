@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://onface.live/admin/admin.css" />
+    <link rel="stylesheet" href="./common/index.css" />
+    <title>用户角色</title>
+</head>
+<body>
+    <div class="m-head">
+        <div class="m-head-inner">
+            <a class="m-head-logo" href="/" >
+                <img src="./common/logo.png" alt="" class="m-head-logo-photo" />
+            </a>
+            <div class="m-head-nav">
+                <a href="./project.html" class="m-head-nav-item ">项目管理</a>
+                <a href="./event.html" class="m-head-nav-item ">活动管理</a>
+                <a href="./channel.html" class="m-head-nav-item ">渠道管理</a>
+                <a href="./audit.html" class="m-head-nav-item ">审核</a>
+                <a href="./user.html" class="m-head-nav-item m-head-nav-item--on ">系统管理</a>
+            </div>
+            <div class="m-head-user">
+                <div href="#" class="m-head-user-link m-head-user-link--edit">账户编辑</div>
+                <div href="#" class="m-head-user-link m-head-user-link--user">Hi,张三</div>
+                <a href="http://datasuv.net/logout" class="m-head-user-link m-head-user-link--exit">退出</a>
+            </div>
+        </div>
+    </div>
+    <div class="m-menu">
+        <div class="m-menu-inner">
+            <a class="m-menu-item" href="./user.html">用户管理</a>
+            <a class="m-menu-item m-menu-item--on" href="./role.html">角色管理</a>
+            <a class="m-menu-item" href="./sms.html">短信发送日志</a>
+        </div>
+    </div>
+    <div class="m-body">
+        <div class="mo-box">
+            <div class="mo-box-hd">
+                新建角色
+            </div>
+            <div class="mo-box-bd">
+                <form
+                    class="mo-form mo-form--level"
+                    method="get"
+                    action="./m/json/ok.json"
+                    data-form-ajax="true"
+                    >
+                    <div class="mo-form-item">
+                        <span class="mo-form-item-label">角色名</span>
+                        <span class="mo-form-item-form">
+                            <input type="text" name="name" class="mo-input" placeholder="">
+                        </span>
+                    </div>
+                    <div class="mo-form-item">
+                        <span class="mo-form-item-label">权限控制</span>
+                        <span class="mo-form-item-form">
+                            <div
+                            	data-tree-name="some"
+                            	data-tree-options="#treeJSON"
+                             >
+                            </div>
+                            <!-- 编辑状态
+                            <div
+                                data-tree-name="edit"
+                                data-tree-options="#treeJSON"
+                                data-tree-value="2-2-2,1-2-2"
+                                data-tree-link-parent=false
+                                data-tree-link-child=false
+                             >
+                            </div>
+                             -->
+                            <script id="treeJSON" type="text/json" >
+                                [
+                                    {
+                                        "label": "北京",
+                                        "value": "1",
+                                        "children": [
+                                            {
+                                                "label": "朝阳区",
+                                                "value":"1-1",
+                                                "children": [
+                                                    {
+                                                        "label": "黄泉路",
+                                                        "value": "1-1-1"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "label": "八宝山",
+                                                "value":"1-2",
+                                                "children": [
+                                                    {
+                                                        "label": "公墓",
+                                                        "value":"1-2-1"
+                                                    },
+                                                    {
+                                                        "label": "大门",
+                                                        "value":"1-2-2"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "label": "上海",
+                                        "value": "2",
+                                        "children": [
+                                            {
+                                                "label": "黄埔区",
+                                                "value": "2-1",
+                                                "children": [
+                                                    {
+                                                        "label": "abc",
+                                                        "value": "2-1-1"
+                                                    },
+                                                    {
+                                                        "label": "def",
+                                                        "value": "2-1-2"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "label": "虹口区",
+                                                "value": "2-2",
+                                                "children": [
+                                                    {
+                                                        "label": "武进路",
+                                                        "value": "2-2-1"
+                                                    },
+                                                    {
+                                                        "label": "四平路",
+                                                        "value": "2-2-2"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "label": "没有子元素",
+                                                "value": "2-3"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            </script>
+                        </span>
+                    </div>
+                    <div class="mo-form-item">
+                        <span class="mo-form-item-label"></span>
+                        <span class="mo-form-item-form">
+                            <button class="mo-btn mo-btn--info">创建</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://onface.live/admin/admin-deps.js"></script>
+    <script src="https://onface.live/admin/admin.js"></script>
+</body>
+</html

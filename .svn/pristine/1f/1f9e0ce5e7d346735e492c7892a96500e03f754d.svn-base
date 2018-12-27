@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://onface.live/admin/admin.css" />
+    <link rel="stylesheet" href="./common/index.css" />
+    <title>用户角色</title>
+</head>
+<body>
+    <div class="m-head">
+        <div class="m-head-inner">
+            <a class="m-head-logo" href="/" >
+                <img src="./common/logo.png" alt="" class="m-head-logo-photo" />
+            </a>
+            <div class="m-head-nav">
+                <a href="./project.html" class="m-head-nav-item  m-head-nav-item--on">项目管理</a>
+                <a href="./event.html" class="m-head-nav-item ">活动管理</a>
+                <a href="./channel.html" class="m-head-nav-item ">渠道管理</a>
+                <a href="./audit.html" class="m-head-nav-item ">审核</a>
+                <a href="./user.html" class="m-head-nav-item  ">系统管理</a>
+            </div>
+            <div class="m-head-user">
+                <div href="#" class="m-head-user-link m-head-user-link--edit">账户编辑</div>
+                <div href="#" class="m-head-user-link m-head-user-link--user">Hi,张三</div>
+                <a href="http://datasuv.net/logout" class="m-head-user-link m-head-user-link--exit">退出</a>
+            </div>
+        </div>
+    </div>
+    <div class="m-menu">
+        <div class="m-menu-inner">
+            <div class="m-menu-inner">
+                <a class="m-menu-item m-menu-item--on" href="./project.html">项目管理</a>
+                <a class="m-menu-item" href="./company-form.html">新建公司</a>
+            </div>
+        </div>
+    </div>
+    <div class="m-body">
+        <style>
+        .count {
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .count td {
+            border-left: 1px solid #ccc;
+        }
+        .count td:first-child {
+            border-left: none;
+        }
+        .count-item {
+            text-align: center;
+        }
+        .count-item-hd {
+            font-size: 24px;
+            color: #333;
+            line-height: 32px;
+        }
+        .count-item-title {
+            color: #2d8cf0;
+            font-size: 14px;
+        }
+
+        </style>
+        <table class="count">
+          <tbody>
+            <tr>
+              <td>
+                <div class="count-item">
+                  <div class="count-item-hd">23123</div>
+                  <div class="count-item-title">总名单</div></div>
+              </td>
+              <td>
+                <div class="count-item">
+                  <div class="count-item-hd">1573</div>
+                  <div class="count-item-title">今日总名单</div></div>
+              </td>
+              <td>
+                <div class="count-item">
+                  <div class="count-item-hd">4684</div>
+                  <div class="count-item-title">昨日总名单</div></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="mo-box">
+            <div class="mo-box-hd">
+                <strong>平安</strong>
+            </div>
+            <div class="mo-box-bd">
+                <div class="mo-tableScroll">
+                    <table class="mo-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    项目名
+                                </th>
+                                <th>
+                                    总名单
+                                </th>
+                                <th>
+                                    今日总名单
+                                </th>
+                                <th>
+                                    昨日总名单
+                                </th>
+                                <th>
+                                    操作
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>平安普惠</td>
+                                <td>23412</td>
+                                <td>1232</td>
+                                <td>21313</td>
+                                <td>
+                                    <a href="./project-rank.html" class="mo-btn mo-btn--link">排名</a>
+                                    <a href="./project-form.html" class="mo-btn mo-btn--link">编辑</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="m-tool">
+                    <a href="./project-form.html?company=1" class="mo-btn mo-btn--info">新建项目</a>
+                </div>
+            </div>
+        </div>
+        <div class="mo-box">
+            <div class="mo-box-hd">
+                <strong>泰康</strong>
+            </div>
+            <div class="mo-box-bd">
+                <div class="mo-tableScroll">
+                    <table class="mo-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    项目名
+                                </th>
+                                <th>
+                                    总名单
+                                </th>
+                                <th>
+                                    今日总名单
+                                </th>
+                                <th>
+                                    昨日总名单
+                                </th>
+                                <th>
+                                    操作
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>人寿赠险</td>
+                                <td>23412</td>
+                                <td>1232</td>
+                                <td>21313</td>
+                                <td>
+                                    <a href="./project-rank.html" class="mo-btn mo-btn--link">排名</a>
+                                    <a href="./project-form.html" class="mo-btn mo-btn--link">编辑</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="m-tool">
+                    <a href="./project-form.html?company=1" class="mo-btn mo-btn--info">新建项目</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://onface.live/admin/admin-deps.js"></script>
+    <script src="https://onface.live/admin/admin.js"></script>
+
+</body>
+</html

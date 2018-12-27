@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://onface.live/admin/admin.css" />
+    <link rel="stylesheet" href="./common/index.css" />
+    <title>项目统计</title>
+</head>
+<body>
+    <div class="m-head">
+        <div class="m-head-inner">
+            <a class="m-head-logo" href="/" >
+                <img src="./common/logo.png" alt="" class="m-head-logo-photo" />
+            </a>
+            <div class="m-head-nav">
+                <a href="./project.html" class="m-head-nav-item ">项目管理</a>
+                <a href="./event.html" class="m-head-nav-item ">活动管理</a>
+                <a href="./channel.html" class="m-head-nav-item ">渠道管理</a>
+                <a href="./audit.html" class="m-head-nav-item ">审核</a>
+                <a href="./user.html" class="m-head-nav-item m-head-nav-item--on ">系统管理</a>
+            </div>
+            <div class="m-head-user">
+                <div href="#" class="m-head-user-link m-head-user-link--edit">账户编辑</div>
+                <div href="#" class="m-head-user-link m-head-user-link--user">Hi,张三</div>
+                <a href="http://datasuv.net/logout" class="m-head-user-link m-head-user-link--exit">退出</a>
+            </div>
+        </div>
+    </div>
+    <div class="m-menu">
+        <div class="m-menu-inner">
+
+        </div>
+    </div>
+    <div class="m-body">
+       <div class="mo-grid mo-grid--sapce">
+           <div class="mo-grid-12">
+
+           </div>
+           <div class="mo-grid-12" style="text-align:right;" >
+               <form  class="mo-form mo-form--inline" action="/login/" method="post" >
+                  <div class="mo-form-item">
+                      <span class="mo-form-item-form">
+                          <span data-timerange-name="date" data-timerange-value="2016-12-06~2016-12-06" ></span>
+                          <!-- 默认显示今天 -->
+                          <!-- data-timerange-value="2016-12-06~2016-12-20" -->
+                      </span>
+                  </div>
+                  <div class="mo-form-item">
+                      <span class="mo-form-item-form mo-form-item-form--lg" style="text-align:left;">
+                          <style>
+                          .rc-tree-select {
+                              width: 150px !important;
+                          }
+                          </style>
+                          渠道：<span
+                                data-ts-name="channel"
+                                data-ts-value=""
+                                data-ts-options="#tsJSON"
+                            ></span>
+                            <script id="tsJSON" type="text/json">
+                                [
+                                    {
+                                        "label": "a",
+                                        "value": "1",
+                                        "children": [
+                                            {
+                                                "label": "a-a",
+                                                "value":"1-1",
+                                                "children": [
+                                                    {
+                                                        "label": "a-a-a",
+                                                        "value": "1-1-1"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "label": "a-b",
+                                                "value":"1-2",
+                                                "children": [
+                                                    {
+                                                        "label": "a-b-a",
+                                                        "value":"1-2-1"
+                                                    },
+                                                    {
+                                                        "label": "a-b-b",
+                                                        "value":"1-2-2"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "label": "b",
+                                        "value": "2",
+                                        "children": [
+                                            {
+                                                "label": "b-a",
+                                                "value": "2-1",
+                                                "children": [
+                                                    {
+                                                        "label": "b-a-a",
+                                                        "value": "2-1-1"
+                                                    },
+                                                    {
+                                                        "label": "b-a-b",
+                                                        "value": "2-1-2"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "label": "b-b",
+                                                "value": "2-2",
+                                                "children": [
+                                                    {
+                                                        "label": "b-b-a",
+                                                        "value": "2-2-1"
+                                                    },
+                                                    {
+                                                        "label": "b-b-b",
+                                                        "value": "2-2-2"
+                                                    },
+                                                    {
+                                                        "label": "b-b-d",
+                                                        "value": "2-2-3"
+                                                    },
+                                                    {
+                                                        "label": "b-b-d",
+                                                        "value": "2-2-4"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "label": "没有子元素",
+                                                "value": "2-3"
+                                            }
+                                        ]
+                                    }
+                                ]
+                                </script>
+                      </span>
+                  </div>
+                  <div class="mo-form-item">
+                      <button class="mo-btn mo-btn--info mo-form-btn"><span class="fa fa-search" ></span></button>
+                  </div>
+              </form>
+           </div>
+       </div>
+        <style>
+        .count {
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .count td {
+            border-left: 1px solid #ccc;
+        }
+        .count td:first-child {
+            border-left: none;
+        }
+        .count-item {
+            text-align: center;
+        }
+        .count-item-hd {
+            font-size: 24px;
+            color: #333;
+            line-height: 32px;
+        }
+        .count-item-title {
+            color: #2d8cf0;
+            font-size: 14px;
+        }
+
+        </style>
+        <table class="count">
+          <tbody>
+            <tr>
+              <td>
+                <div class="count-item">
+                  <div class="count-item-hd">9104</div>
+                  <div class="count-item-title">毛名单</div></div>
+              </td>
+              <td>
+                <div class="count-item">
+                  <div class="count-item-hd">2022</div>
+                  <div class="count-item-title">无效数据</div></div>
+              </td>
+              <td>
+                <div class="count-item">
+                  <div class="count-item-hd">806</div>
+                  <div class="count-item-title">有效数据</div></div>
+              </td>
+              <td>
+                <div class="count-item">
+                  <div class="count-item-hd">20</div>
+                  <div class="count-item-title">待定数据</div></div>
+              </td>
+              <td>
+                <div class="count-item">
+                  <div class="count-item-hd">1573</div>
+                  <div class="count-item-title">承保成功</div></div>
+              </td>
+              <td>
+                <div class="count-item">
+                  <div class="count-item-hd">4684</div>
+                  <div class="count-item-title">承保失败</div></div>
+              </td>
+              <td>
+                <div class="count-item">
+                  <div class="count-item-hd">902</div>
+                  <div class="count-item-title">年龄不符</div></div>
+              </td>
+              <td>
+                <div class="count-item">
+                  <div class="count-item-hd">4</div>
+                  <div class="count-item-title">测试数据</div></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+    </div>
+    <script src="https://onface.live/admin/admin-deps.js"></script>
+    <script src="https://onface.live/admin/admin.js"></script>
+</body>
+</html

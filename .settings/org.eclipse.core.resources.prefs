@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//resources/views/admin/login.blade.php=UTF-8
+encoding//resources/views/admin/m/json=UTF-8
+encoding//resources/views/admin/m/json/ajaxtable.json=UTF-8
+encoding//resources/views/admin/m/json/ok-msg.json=UTF-8
+encoding//resources/views/admin/m/json/ok-upload-file.json=UTF-8
+encoding/<project>=UTF-8
+separateDerivedEncodings=true

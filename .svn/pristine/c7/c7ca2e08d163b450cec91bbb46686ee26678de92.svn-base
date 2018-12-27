@@ -1,0 +1,19 @@
+    <div class="m-head">
+        <div class="m-head-inner">
+            <a class="m-head-logo" href="/" >
+                <img src="./common/logo.png" alt="" class="m-head-logo-photo" />
+            </a>
+            <div class="m-head-nav">
+                <a href="./project.html" class="m-head-nav-item ">项目管理</a>
+                <a href="./event.html" class="m-head-nav-item ">活动管理</a>
+                <a href="./channel.html" class="m-head-nav-item ">渠道管理</a>
+                <a href="./audit.html" class="m-head-nav-item ">审核</a>
+                <a href="./user.html" class="m-head-nav-item m-head-nav-item--on ">系统管理</a>
+            </div>
+            <div class="m-head-user">
+                <div href="#" class="m-head-user-link m-head-user-link--edit">账户编辑</div>
+                <div href="#" class="m-head-user-link m-head-user-link--user">Hi,张三</div>
+                <a href="http://datasuv.net/logout" class="m-head-user-link m-head-user-link--exit">退出</a>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,7 @@
+    <div class="m-menu">
+        <div class="m-menu-inner">
+            <a class="m-menu-item m-menu-item--on" href="/user">用户管理</a>
+            <a class="m-menu-item" href="/role">角色管理</a>
+            <a class="m-menu-item" href="/sms">短信发送日志</a>
+        </div>
+    </div>

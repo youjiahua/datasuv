@@ -1,0 +1,102 @@
+<?php $__env->startSection('header'); ?>
+<title>用户角色</title>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+<div class="m-body">
+        <div class="m-tool">
+            <div class="mo-grid mo-grid--sapce">
+                <div class="mo-grid-12">
+                    <a href="./user-form.html" class="mo-btn mo-btn--primary">新建用户</a>
+                </div>
+                <div class="mo-grid-12" style="text-align:right;" >
+                    <form  class="mo-form mo-form--inline" action="/login/" method="post">
+                       <div class="mo-form-item">
+                           <span class="mo-form-item-form">
+                               <input type="text" name="user" class="mo-input" placeholder="输入用户名／手机">
+                           </span>
+                       </div>
+                       <div class="mo-form-item">
+                           <span class="mo-form-item-form mo-form-item-form--lg">
+                               角色组：
+                               <select name="role">
+                                    <option value="1">渠道商</option>
+                                    <option value="2">商务</option>
+                                    <option value="3">商务总监</option>
+                               </select>
+                           </span>
+                       </div>
+                       <div class="mo-form-item">
+                           <button class="mo-btn mo-btn--info mo-form-btn"><span class="fa fa-search" ></span></button>
+                       </div>
+                   </form>
+                </div>
+            </div>
+        </div>
+        <div class="mo-box">
+            <div class="mo-box-hd">
+                用户列表
+            </div>
+            <div class="mo-box-bd">
+                <!-- Start -->
+                <div class="mo-tableScroll">
+                    <table class="mo-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    ID
+                                </th>
+                                <th>
+                                    手机
+                                </th>
+                                <th>
+                                    姓名
+                                </th>
+                                <th>
+                                    角色组
+                                </th>
+                                <th>
+                                    操作
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>rf23fwedf</td>
+                                <td>13623225555</td>
+                                <td>张三</td>
+                                <td>渠道商</td>
+                                <td>
+                                    <a href="./user-form.html" class="mo-btn mo-btn--primary">编辑</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- End -->
+                <div class="mo-paging">
+                    <a href="#" class="mo-paging-prev">
+                        <i class="fa fa-angle-left" title="左三角形"></i> 上一页
+                    </a>
+                    <a href="#" class="mo-paging-item">1</a>
+                    <a href="#" class="mo-paging-item mo-paging-current">2</a>
+                    <a href="#" class="mo-paging-item">3</a>
+                    <a href="#" class="mo-paging-item">4</a>
+                    <a href="#" class="mo-paging-item">5</a>
+                    <a href="#" class="mo-paging-item">6</a>
+                    <a href="#" class="mo-paging-item">7</a>
+                    <span class="mo-paging-ellipsis">...</span>
+                    <a href="#" class="mo-paging-item">24</a>
+                    <a href="#" class="mo-paging-next">
+                        下一页 <i class="fa fa-angle-right" title="右三角形"></i>
+                    </a>
+                    <span class="mo-paging-info"><span class="mo-paging-bold">5/7</span>页</span>
+                    <form action="" style="display:inline-block;">
+                        <span class="mo-paging-which" ><input name="page" value="5" type="text"></span>
+                        <button type="submit" >跳转</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.layout.common', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

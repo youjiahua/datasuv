@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://onface.live/admin/admin.css" />
+    <link rel="stylesheet" href="./common/index.css" />
+    <title>排名</title>
+</head>
+<body>
+    <div class="m-head">
+        <div class="m-head-inner">
+            <a class="m-head-logo" href="/" >
+                <img src="./common/logo.png" alt="" class="m-head-logo-photo" />
+            </a>
+            <div class="m-head-nav">
+                <a href="./project.html" class="m-head-nav-item m-head-nav-item--on ">项目管理</a>
+                <a href="./event.html" class="m-head-nav-item ">活动管理</a>
+                <a href="./channel.html" class="m-head-nav-item ">渠道管理</a>
+                <a href="./audit.html" class="m-head-nav-item ">审核</a>
+                <a href="./user.html" class="m-head-nav-item ">系统管理</a>
+            </div>
+            <div class="m-head-user">
+                <div href="#" class="m-head-user-link m-head-user-link--edit">账户编辑</div>
+                <div href="#" class="m-head-user-link m-head-user-link--user">Hi,张三</div>
+                <a href="http://datasuv.net/logout" class="m-head-user-link m-head-user-link--exit">退出</a>
+            </div>
+        </div>
+    </div>
+    <div class="m-menu">
+        <div class="m-menu-inner">
+            <div class="m-menu-inner">
+                <a class="m-menu-item m-menu-item--on" href="./project.html">项目管理</a>
+                <a class="m-menu-item" href="./company-form.html">新建公司</a>
+            </div>
+        </div>
+    </div>
+    <div class="m-body">
+        <div class="mo-box">
+            <div class="mo-box-hd">
+                排名
+            </div>
+            <div class="mo-box-bd">
+                <!-- Start -->
+                <div class="mo-tableScroll">
+                    <table class="mo-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    名次
+                                </th>
+                                <th>
+                                    商务
+                                </th>
+                                <th>
+                                    渠道名
+                                </th>
+                                <th>总名单</th>
+                                <th>
+                                    今日名单
+                                    <hr>
+                                    承保数
+                                </th>
+                                <th>
+                                    昨日名单
+                                    <hr>
+                                    承保数
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>🏆</td>
+                                <td>张三</td>
+                                <td>微信</td>
+                                <td>12312</td>
+                                <td>
+                                    100
+                                    <hr>
+                                    88
+                                </td>
+                                <td>
+                                    100
+                                    <hr>
+                                    88
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>🥈</td>
+                                <td>张三</td>
+                                <td>微信</td>
+                                <td>12312</td>
+                                <td>
+                                    100
+                                    <hr>
+                                    88
+                                </td>
+                                <td>
+                                    100
+                                    <hr>
+                                    88
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>🥉</td>
+                                <td>张三</td>
+                                <td>微信</td>
+                                <td>12312</td>
+                                <td>
+                                    100
+                                    <hr>
+                                    88
+                                </td>
+                                <td>
+                                    100
+                                    <hr>
+                                    88
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>张三</td>
+                                <td>微信</td>
+                                <td>12312</td>
+                                <td>
+                                    100
+                                    <hr>
+                                    88
+                                </td>
+                                <td>
+                                    100
+                                    <hr>
+                                    88
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>张三</td>
+                                <td>微信</td>
+                                <td>12312</td>
+                                <td>
+                                    100
+                                    <hr>
+                                    88
+                                </td>
+                                <td>
+                                    100
+                                    <hr>
+                                    88
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- End -->
+                <div class="mo-paging">
+                    <a href="#" class="mo-paging-prev">
+                        <i class="fa fa-angle-left" title="左三角形"></i> 上一页
+                    </a>
+                    <a href="#" class="mo-paging-item">1</a>
+                    <a href="#" class="mo-paging-item mo-paging-current">2</a>
+                    <a href="#" class="mo-paging-item">3</a>
+                    <a href="#" class="mo-paging-item">4</a>
+                    <a href="#" class="mo-paging-item">5</a>
+                    <a href="#" class="mo-paging-item">6</a>
+                    <a href="#" class="mo-paging-item">7</a>
+                    <span class="mo-paging-ellipsis">...</span>
+                    <a href="#" class="mo-paging-item">24</a>
+                    <a href="#" class="mo-paging-next">
+                        下一页 <i class="fa fa-angle-right" title="右三角形"></i>
+                    </a>
+                    <span class="mo-paging-info"><span class="mo-paging-bold">5/7</span>页</span>
+                    <form action="" style="display:inline-block;">
+                        <span class="mo-paging-which" ><input name="page" value="5" type="text"></span>
+                        <button type="submit" >跳转</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://onface.live/admin/admin-deps.js"></script>
+    <script src="https://onface.live/admin/admin.js"></script>
+
+</body>
+</html

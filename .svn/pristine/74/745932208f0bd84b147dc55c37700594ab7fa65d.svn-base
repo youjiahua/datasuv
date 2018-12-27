@@ -1,0 +1,43 @@
+<?php $__env->startSection('header'); ?>
+<title>角色管理</title>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+	<div class="m-body">
+        <div class="m-tool">
+            <a href="./role-form.html" class="mo-btn mo-btn--primary">新建角色</a>
+        </div>
+        <div class="mo-box">
+            <div class="mo-box-hd">
+                角色列表
+            </div>
+            <div class="mo-box-bd">
+                <!-- Start -->
+                <div class="mo-tableScroll">
+                    <table class="mo-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    角色名
+                                </th>
+                                <th>
+                                    操作
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>渠道商</td>
+                                <td>
+                                    <a href="./role-form.html" class="mo-btn mo-btn--primary">编辑</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- End -->
+            </div>
+        </div>
+    </div>
+<?php $__env->stopSection(); ?> 
+
+<?php echo $__env->make('admin.layout.common', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

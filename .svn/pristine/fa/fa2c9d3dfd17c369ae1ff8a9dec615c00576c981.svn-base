@@ -1,0 +1,93 @@
+<?php
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\AdminController;
+use Illuminate\Http\Request;
+use App\Model\Admin;
+
+class AuthController extends AdminController{
+    /**
+     * 登陆
+     */
+    public function login(){ 
+        if(request()->isMethod('post')){
+            $input = request()->only(['mobile', 'code','password','sms_code']); 
+            $smsCode=session()->get('smsCode');
+            if(empty($input['sms_code'])||md5($input['sms_code'])!=$smsCode){    
+                return ajaxreturn('error','短信验证码错误');
+            }
+            session()->remove('verifyTime');
+            session()->remove('smsCode');
+            return (new Admin)->login($input['mobile'],$input['password']);
+        }
+    }
+    /**
+     * 
+     * @return \App\Model\mix
+     */
+    public function logout(){ 
+        session()->forget('admin');
+        return redirect('/Home');
+    }
+    public function test(){  
+        return (new Admin)->login('13333333333','123456'); 
+        echo get_fuzzy_mobile('13636624908');
+    }
+    /**
+     * 短信发送
+     */
+    public function sms(){ 
+        if(Request()->ajax()){    
+            $expires=30;//5分钟短信验证码过期
+            $input = request()->only(['mobile', 'code']);
+            $mobile=$input['mobile'];
+            $code=$input['code'];
+            $return=[
+                'status'=>'',
+                'msg'=>''
+            ];
+            if(empty($mobile)){           
+                $return['status']='error';
+                $return['msg']='请输入手机号码';
+            }else if(is_mobile($mobile)){
+                $admin=Admin::where('mobile',$mobile)->first();
+                if($admin){
+                    $verifyCode=session()->get('verifyCode');
+                    if(md5($code)==$verifyCode){                         
+                        $verifyTime=session()->get('verifyTime')??0;
+                        if($verifyTime<time()-$expires||$verifyTime==0){
+                            session()->put('verifyTime',time());                        
+                            session()->put('smsCode',md5('1111'));
+                            //发送验证码
+                            $return['status']='success';
+                            $return['msg']='ok';
+                        }else{                        
+                            $return['status']='error';
+                            $return['msg']='验证码已发送';
+                        }
+                    }else{                    
+                        $return['status']='error';
+                        $return['msg']='验证码错误';
+                    }
+                }else{                    
+                    $return['status']='error';
+                    $return['msg']='手机号不存在';
+                }
+            }else{
+                $return['status']='error';
+                $return['msg']='手机号码错误';
+            }             
+            return ajaxreturn($return['status'],$return['msg']);
+        }
+    }
+    /**
+     * 验证码
+     * @return image
+     */
+    public function verify(){ 
+        $code=verifyCode();  
+        session()->put('verifyCode', md5($code));
+        session()->save(); 
+    }
+
+}
