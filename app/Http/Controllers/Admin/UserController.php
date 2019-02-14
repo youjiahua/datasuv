@@ -51,7 +51,7 @@ class UserController extends AdminController{
             if($id){
                 return ajaxreturn('success','创建成功');
             }else{
-                return ajaxreturn('error','创建失败');
+                return ajaxreturn('error','创建失败'); 
             }
         }catch (\Exception $e){
             CustomLog::admin_log('用户创建失败:'.$e->getMessage());
